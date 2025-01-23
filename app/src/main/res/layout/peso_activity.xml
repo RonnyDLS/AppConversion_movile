@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="-7dp"
+    tools:layout_editor_absoluteY="32dp"
+    android:id="@+id/main">
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="80dp"
+        android:stretchColumns="*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/appConversion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adlam_display"
+                android:text="AppConversion"
+                android:textColor="@color/azulClaro"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.119"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.07" />
+
+            <TextView
+                android:id="@+id/nombreUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.076" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="67dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:text="> Peso"
+        android:textSize="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="48dp"
+        android:textStyle="bold"
+        android:text="Convertir de Kilogramos a Libras:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        >
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:background="@color/grisClaro"
+            android:orientation="vertical"
+            android:padding="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <TextView
+                android:id="@+id/txtkgramos"
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:text="Kilogramos "
+                android:textSize="11dp" />
+
+            <EditText
+                android:id="@+id/kgramos"
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txtlb"
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:layout_marginTop="30dp"
+                android:text="Libras"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/lb"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnConvertir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Convertir" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reiniciar"
+            android:layout_width="342dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="180dp"
+            android:backgroundTint="@color/rojoClaro"
+            android:text="Reiniciar"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:layout_editor_absoluteX="53dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
